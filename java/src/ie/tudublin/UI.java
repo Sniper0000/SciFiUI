@@ -1,12 +1,15 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import ddf.minim.*;
 
 public class UI extends PApplet
 {
-    Button b1,b2,b3;
+    Minim minim;
+    Button b1, b2, b3;
     MovingCircle mc;
     DashBoard d;
+    Frame f1, f2, f3, f4;
 
     boolean[] keys = new boolean[1024];
 
@@ -36,17 +39,19 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b1 = new Button(this, 50, 50, 100, 50, "Star Map");
-        b2 = new Button(this, 50, 150, 100, 50, "Ship Info");
-        b3 = new Button(this, 50, 250, 100, 50, "");
+        b1 = new Button(this, 150, 100, 100, 50, 7, "Star Map");
+        b2 = new Button(this, 150, 200, 100, 50, 7, "Ship Info");
+        b3 = new Button(this, 150, 300, 100, 50, 7,"News");
         mc = new MovingCircle(this, width / 2, height * .75f, 50);
         radar = new Radar(this, 1, width * 8 / 9, height * 4 / 5, 150);
         border = width * 0.05f;
         d = new DashBoard(this, width / 2, height * 8 / 9, 200, PI, TWO_PI);
+        f1 = new Frame(this, 50, 50, 300, 340, 7, "Control Button");
+        f4 = new Frame(this, 1530, 670, 350, 380, 7, "Radar");
     }
-
     Radar radar;
     float border;
+    DashBoard dashBoard;
 
     /*private void drawGrid()
     {
@@ -84,6 +89,10 @@ public class UI extends PApplet
             System.out.println("Left arrow key pressed");
         }
 
+        f1.render();
+        f4.render();
+
+        //d.update();
         d.render();
         //drawGrid();
     }
