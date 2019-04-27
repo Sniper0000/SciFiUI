@@ -27,19 +27,40 @@ public class UI extends PApplet
 
     public void settings()
     {
-        size(800, 800);
+        //size(800, 800);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(P3D); 
+        fullScreen();
     }
 
     public void setup()
     {
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height * .75f, 50);
-        radar = new Radar(this, 1, width / 2, height / 2, 100);
+        radar = new Radar(this, 1, width * 3 / 4, height * 3 / 4, 100);
+        border = width * 0.05f;
     }
 
     Radar radar;
+    float border;
+
+    /*private void drawGrid()
+    {
+        textAlign(CENTER, CENTER);
+        for(int i = -10; i <= 10; i ++)
+        {
+            float x = map(i, -10, 10, border, width - border);
+            float y = map(i, -10, 10, border, height - border);
+            stroke(0, 0, 255);
+            line(x, border, x, height - border);
+            fill(255);
+            text(i, x, border / 2);
+            stroke(0, 0, 255);
+            line(border, y, width - border, y);
+            fill(255);
+            text(i, border / 2, y);
+        }
+    }*/
 
     public void draw()
     {
@@ -56,6 +77,8 @@ public class UI extends PApplet
         {
             System.out.println("Left arrow key pressed");
         }
+
+        //drawGrid();
     }
 }
 
