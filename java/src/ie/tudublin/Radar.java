@@ -42,7 +42,7 @@ public class Radar
 
     public void update()
     {
-        theta += PApplet.TWO_PI * timeDelta * frequency;
+        theta += PApplet.QUARTER_PI * timeDelta * frequency;
     }
 
     /**

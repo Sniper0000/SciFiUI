@@ -4,8 +4,9 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
-    Button b;
+    Button b1,b2,b3;
     MovingCircle mc;
+    DashBoard d;
 
     boolean[] keys = new boolean[1024];
 
@@ -35,10 +36,13 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b = new Button(this, 50, 50, 100, 50, "I am a button");
+        b1 = new Button(this, 50, 50, 100, 50, "Star Map");
+        b2 = new Button(this, 50, 150, 100, 50, "Ship Info");
+        b3 = new Button(this, 50, 250, 100, 50, "");
         mc = new MovingCircle(this, width / 2, height * .75f, 50);
-        radar = new Radar(this, 1, width * 3 / 4, height * 3 / 4, 100);
+        radar = new Radar(this, 1, width * 8 / 9, height * 4 / 5, 150);
         border = width * 0.05f;
+        d = new DashBoard(this, width / 2, height * 8 / 9, 200, PI, TWO_PI);
     }
 
     Radar radar;
@@ -65,7 +69,9 @@ public class UI extends PApplet
     public void draw()
     {
         background(0);
-        b.render();
+        b1.render();
+        b2.render();
+        b3.render();
 
         mc.update();
         mc.render();
@@ -78,6 +84,7 @@ public class UI extends PApplet
             System.out.println("Left arrow key pressed");
         }
 
+        d.render();
         //drawGrid();
     }
 }
