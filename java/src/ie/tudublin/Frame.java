@@ -30,6 +30,7 @@ public class Frame
         ui.strokeWeight(3);
         ui.rect(x, y, width, height,radius);
         ui.textAlign(PApplet.CENTER, PApplet.TOP);
-        ui.text(text, x + width * 0.2f, y + height * 0.05f); 
+        ui.text(text, x + width * 0.2f, y + height * 0.05f);
+        ui.strokeWeight(1); 
     }
 }

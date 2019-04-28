@@ -1,15 +1,14 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
-import ddf.minim.*;
 
 public class UI extends PApplet
 {
-    Minim minim;
     Button b1, b2, b3;
     MovingCircle mc;
-    DashBoard d;
-    Frame f1, f2, f3, f4;
+    DashBoard d1, d2;
+    Frame f1, f2, f3, f4, f5, f6, f7, f8;
+    FrameLine l1, l2, l3, l4;
 
     boolean[] keys = new boolean[1024];
 
@@ -39,19 +38,41 @@ public class UI extends PApplet
 
     public void setup()
     {
+        // button
         b1 = new Button(this, 150, 100, 100, 50, 7, "Star Map");
         b2 = new Button(this, 150, 200, 100, 50, 7, "Ship Info");
         b3 = new Button(this, 150, 300, 100, 50, 7,"News");
+
+        //moving circle
         mc = new MovingCircle(this, width / 2, height * .75f, 50);
-        radar = new Radar(this, 1, width * 8 / 9, height * 4 / 5, 150);
+
+        // radar
+        radar = new Radar(this, 1, 1700, 860, 150);
+        
+        // border
         border = width * 0.05f;
-        d = new DashBoard(this, width / 2, height * 8 / 9, 200, PI, TWO_PI);
+        
+
+        // dash board
+        d1 = new DashBoard(this, 1, 550, 860, 150);
+        d2 = new DashBoard(this, 2, 950, 860, 150);
+
+        // frame
         f1 = new Frame(this, 50, 50, 300, 340, 7, "Control Button");
-        f4 = new Frame(this, 1530, 670, 350, 380, 7, "Radar");
+        f2 = new Frame(this, 50, 400, 300, 400, 7, "Ship Statu");
+        f3 = new Frame(this, 50, 810, 300, 240, 7, "SPACE SHIP SYSTEM V1.0");
+        f4 = new Frame(this, 360, 50, 1160, 600, 7, "monitor");
+        f5 = new Frame(this, 360, 670, 1160, 380, 7, "Dash Board");
+        f6 = new Frame(this, 1530, 50, 350, 380, 7, "Star Info");
+        f7 = new Frame(this, 1530, 440, 350, 210, 7, "b3");
+        f8 = new Frame(this, 1530, 670, 350, 380, 7, "Radar");
+
+        // line
+        l1 = new FrameLine(this, 360, 660, 1880 ,660, 3, 153);
+
     }
     Radar radar;
     float border;
-    DashBoard dashBoard;
 
     /*private void drawGrid()
     {
@@ -74,6 +95,7 @@ public class UI extends PApplet
     public void draw()
     {
         background(0);
+
         b1.render();
         b2.render();
         b3.render();
@@ -90,10 +112,20 @@ public class UI extends PApplet
         }
 
         f1.render();
+        f2.render();
+        f3.render();
         f4.render();
+        f5.render();
+        f6.render();
+        f7.render();
+        f8.render();
 
-        //d.update();
-        d.render();
+        l1.render();
+
+        d1.update();
+        d1.render();
+        d2.update();
+        d2.render();
         //drawGrid();
     }
 }
