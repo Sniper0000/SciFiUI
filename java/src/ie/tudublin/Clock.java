@@ -29,9 +29,6 @@ public class Clock extends PApplet
         second = second();
         minute = minute();
         hour = hour();
-        sc = map(second, 0, 60, 0, 360);
-        mn = map(minute, 0, 60, 0, 360);
-        hr = map(hour, 0, 24, 0, 360);
         String Second = second + "";
         String Minute = minute + "";
         String Hour = hour + "";
@@ -55,5 +52,14 @@ public class Clock extends PApplet
         ui.arc(x, y, (radius - 10) * 2, (radius - 10) * 2, 0, mn);
         ui.arc(x, y, (radius - 20) * 2, (radius - 20) * 2, 0, hr);
         ui.strokeWeight(1);
+    }
+
+    float time = 1.0f / 60.0f;
+
+    public void update()
+    {
+        sc = map(second, 0, 60, 0, 360) * time;
+        mn = map(minute, 0, 60, 0, 360) * time;
+        hr = map(hour, 0, 24, 0, 360) * time;
     }
 }

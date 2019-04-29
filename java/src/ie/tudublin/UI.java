@@ -131,7 +131,7 @@ public class UI extends PApplet
         d2.update();
         d2.render();
 
-
+        c.update();
         c.render();
 
         //drawGrid();
