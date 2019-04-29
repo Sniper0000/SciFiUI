@@ -1,6 +1,6 @@
 package ie.tudublin;
 
-public class ShipInfo
+public class ShipStatu
 {
     UI ui;
     private int x1;
@@ -17,7 +17,7 @@ public class ShipInfo
     private int l2;
     private int l3;
 
-    public ShipInfo(UI ui, int x1, int y1, int x2, int y2, int x3, int y3, int color, int no)
+    public ShipStatu(UI ui, int x1, int y1, int x2, int y2, int x3, int y3, int color, int no)
     {
         this.ui = ui;
         this.x1 = x1;
