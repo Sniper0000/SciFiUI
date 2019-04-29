@@ -29,6 +29,7 @@ public class Button
         ui.stroke(255);
         ui.strokeWeight(2);
         ui.rect(x, y, width, height, radius);
+        ui.fill(255);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, x + width * 0.5f, y + height * 0.5f);
         ui.strokeWeight(1);
