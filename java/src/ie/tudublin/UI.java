@@ -10,6 +10,9 @@ public class UI extends PApplet
     Frame f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13;
     FrameLine l1, l2, l3, l4;
     Clock c;
+    ShipInfo si;
+
+    // set variable to control
     public float MCL_Range = 1300;
     public float MCR_Range = 1450;
 
@@ -87,6 +90,8 @@ public class UI extends PApplet
         // clock
         c = new Clock(this, 1700, 250, 150);
 
+        // ship info
+        si = new ShipInfo(this, 200, 550, 100, 750, 300, 750, 255, 3);
     }
     Radar radar;
     //float border;
@@ -159,6 +164,8 @@ public class UI extends PApplet
 
         c.update();
         c.render();
+
+        si.render();
 
         //drawGrid();
     }
