@@ -58,8 +58,8 @@ public class Clock extends PApplet
 
     public void update()
     {
-        sc = map(second, 0, 60, 0, 360) * time;
-        mn = map(minute, 0, 60, 0, 360) * time;
+        sc = map(second + 2, 0, 60, 0, 360) * time;
+        mn = map(minute + 2, 0, 60, 0, 360) * time;
         hr = map(hour, 0, 24, 0, 360) * time;
     }
 }
