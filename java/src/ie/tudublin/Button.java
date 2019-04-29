@@ -33,4 +33,19 @@ public class Button
         ui.text(text, x + width * 0.5f, y + height * 0.5f);
         ui.strokeWeight(1);
     }
+
+    public void MouseClick()
+    {
+        if((ui.mouseX > x && ui.mouseX < x + width))
+        {
+            if((ui.mouseY > y && ui.mouseY < y + height))
+            {
+                if(ui.mousePressed == true)
+                {
+                    ui.fill(153);
+                    ui.rect(x, y, width, height, radius);
+                }
+            }
+        }
+    }
 }

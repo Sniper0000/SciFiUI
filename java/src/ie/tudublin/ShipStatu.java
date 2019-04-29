@@ -1,5 +1,9 @@
 package ie.tudublin;
 
+import java.util.ArrayList;
+
+import processing.core.PVector;
+
 public class ShipStatu
 {
     UI ui;
@@ -11,11 +15,7 @@ public class ShipStatu
     private int y3;
     private int color;
     private int no;
-    private int x;
-    private int y;
-    private int l1;
-    private int l2;
-    private int l3;
+    private ArrayList<PVector> waypoints = new ArrayList<PVector>();
 
     public ShipStatu(UI ui, int x1, int y1, int x2, int y2, int x3, int y3, int color, int no)
     {
