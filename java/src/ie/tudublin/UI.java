@@ -9,6 +9,7 @@ public class UI extends PApplet
     DashBoard d1, d2;
     Frame f1, f2, f3, f4, f5, f6, f7, f8;
     FrameLine l1, l2, l3, l4;
+    Clock c;
 
     boolean[] keys = new boolean[1024];
 
@@ -50,7 +51,7 @@ public class UI extends PApplet
         radar = new Radar(this, 1, 1700, 860, 150);
         
         // border
-        border = width * 0.05f;
+        //border = width * 0.05f;
         
 
         // dash board
@@ -63,16 +64,19 @@ public class UI extends PApplet
         f3 = new Frame(this, 50, 810, 300, 240, 7, "SPACE SHIP SYSTEM V1.0");
         f4 = new Frame(this, 360, 50, 1160, 600, 7, "monitor");
         f5 = new Frame(this, 360, 670, 1160, 380, 7, "Dash Board");
-        f6 = new Frame(this, 1530, 50, 350, 380, 7, "Star Info");
-        f7 = new Frame(this, 1530, 440, 350, 210, 7, "b3");
+        f6 = new Frame(this, 1530, 50, 350, 380, 7, "Clock");
+        f7 = new Frame(this, 1530, 440, 350, 210, 7, "Star Info");
         f8 = new Frame(this, 1530, 670, 350, 380, 7, "Radar");
 
         // line
         l1 = new FrameLine(this, 360, 660, 1880 ,660, 3, 153);
 
+        // clock
+        c = new Clock(this, 1700, 250, 150);
+
     }
     Radar radar;
-    float border;
+    //float border;
 
     /*private void drawGrid()
     {
@@ -126,6 +130,10 @@ public class UI extends PApplet
         d1.render();
         d2.update();
         d2.render();
+
+
+        c.render();
+
         //drawGrid();
     }
 }
