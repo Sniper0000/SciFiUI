@@ -48,9 +48,9 @@ public class Clock extends PApplet
         ui.noFill();
         ui.stroke(255);
         ui.strokeWeight(3);
-        ui.arc(x, y, radius * 2, radius * 2, 0, sc);
-        ui.arc(x, y, (radius - 10) * 2, (radius - 10) * 2, 0, mn);
-        ui.arc(x, y, (radius - 20) * 2, (radius - 20) * 2, 0, hr);
+        ui.arc(x, y, radius * 2, radius * 2, PI + HALF_PI, PI + HALF_PI + sc);
+        ui.arc(x, y, (radius - 10) * 2, (radius - 10) * 2, PI + HALF_PI, PI + HALF_PI + mn);
+        ui.arc(x, y, (radius - 20) * 2, (radius - 20) * 2, PI + HALF_PI, PI + HALF_PI + hr);
         ui.strokeWeight(1);
     }
 

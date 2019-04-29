@@ -5,7 +5,7 @@ import processing.core.PVector;
 
 public class DashBoard 
 {
-    private UI ui;
+    UI ui;
     private float radius;
     private PVector pos;
     private float frequency;

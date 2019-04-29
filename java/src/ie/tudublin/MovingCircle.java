@@ -4,12 +4,12 @@ import processing.core.PApplet;
 
 public class MovingCircle
 {
+    UI ui;
     private float x;
     private float dx = 1;
     private float y;
     private float diameter;
     private float radius;
-    UI ui;
 
     public MovingCircle(UI ui, float x, float y, float diameter)
     {
