@@ -126,16 +126,4 @@ public class Clock extends PApplet
         ui.stroke(255);
         ui.popMatrix();
     }
-
-    float timeDelta = 1.0f / 60.0f;
-    
-    public void update()
-    {
-        time[0] = time[0] * timeDelta;
-        time[1] = time[1] * timeDelta;
-        time[2] = time[2] * timeDelta;
-        timeFloat[0] = timeFloat[0] * timeDelta;
-        timeFloat[1] = timeFloat[0] * timeDelta;
-    }
-
 }

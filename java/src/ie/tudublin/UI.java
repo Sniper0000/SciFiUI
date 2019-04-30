@@ -11,7 +11,7 @@ public class UI extends PApplet
     FrameLine l1, l2, l3, l4;
     DigitalClock c1;
     Clock c2;
-    ShipStatu si;
+    ShipStatu ss;
 
     // set variable to control
     public float MCL_Range = 1300;
@@ -90,8 +90,8 @@ public class UI extends PApplet
         c2 = new Clock(this, 1700, 450, 140);
 
         // ship info
-        si = new ShipStatu(this, 200, 550, 100, 750, 300, 750, 255, 3);
-
+        ss = new ShipStatu(this, 50, 400, 255, 3);
+        
     }
     Radar radar;
 
@@ -147,14 +147,13 @@ public class UI extends PApplet
 
         c1.update();
         c1.render();
-        c2.update();
         c2.render();
         c2.hourPointer();
         c2.minutePointer();
         c2.secondPointer();
 
-        si.render();
-
+        ss.render();
+ 
     }
 }
 
