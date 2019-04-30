@@ -15,7 +15,6 @@ public class ShipStatu
     private int y3;
     private int color;
     private int no;
-    private ArrayList<PVector> waypoints = new ArrayList<PVector>();
 
     public ShipStatu(UI ui, int x1, int y1, int x2, int y2, int x3, int y3, int color, int no)
     {

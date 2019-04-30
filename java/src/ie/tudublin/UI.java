@@ -70,7 +70,7 @@ public class UI extends PApplet
         f3 = new Frame(this, 50, 810, 300, 240, 7, "SPACE SHIP SYSTEM V1.0");
         f4 = new Frame(this, 360, 50, 1160, 600, 7, "monitor");
         f5 = new Frame(this, 360, 670, 1160, 380, 7, "Dash Board");
-        f6 = new Frame(this, 1530, 50, 350, 590, 7, "Clock");
+        f6 = new Frame(this, 1530, 50, 350, 600, 7, "Clock");
         f7 = new Frame(this, 1530, 670, 350, 380, 7, "Radar");
 
         // frame(ship data)
@@ -147,7 +147,11 @@ public class UI extends PApplet
 
         c1.update();
         c1.render();
+        c2.update();
         c2.render();
+        c2.hourPointer();
+        c2.minutePointer();
+        c2.secondPointer();
 
         si.render();
 
