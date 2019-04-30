@@ -8,9 +8,9 @@ public class DigitalClock extends PApplet
     private float x;
     private float y;
     private float radius;
-    private float second;
-    private float minute;
-    private float hour;
+    private int second;
+    private int minute;
+    private int hour;
     private float sc;
     private float mn;
     private float hr;

@@ -35,7 +35,7 @@ public class Button
         ui.strokeWeight(1);
     }
 
-    public void MouseClick()
+    public void MouseClicked()
     {
         if((ui.mouseX > x && ui.mouseX < x + width))
         {

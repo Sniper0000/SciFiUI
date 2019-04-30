@@ -10,6 +10,7 @@ public class Clock extends PApplet
     private float radius;
     private float[] time = new float[3]; // use array to store time: second, minute, hour
     private float[] timeFloat = new float[2];
+    private Boolean flag = true;
 
     public Clock(UI ui, float x, float y, float radius)
     {
@@ -61,6 +62,20 @@ public class Clock extends PApplet
         ui.textSize(10);
     }
 
+    public void keyPressed()
+    {
+        if(ui.checkKey(LEFT))
+        {
+            flag = false;
+            System.out.println("Stop");
+        }
+        else if(ui.checkKey(RIGHT))
+        {
+            flag = true;
+            System.out.println("Start");
+        }   
+    }
+
     public void hourPointer()
     {
         // hour pointer
@@ -76,7 +91,14 @@ public class Clock extends PApplet
         {
             angleHour = radians(30 * (timeFloat[1] - 1) + 300);
         }
-        ui.rotate(angleHour);
+        if (flag) 
+        {
+            ui.rotate(angleHour);
+        } 
+        else 
+        {
+            ui.rotate(radians(270));
+        }
         ui.stroke(255);
         ui.strokeWeight(7);
         ui.line(-10, 0, 50, 0);
@@ -98,7 +120,14 @@ public class Clock extends PApplet
         {
             angleMinute = radians(6 * (timeFloat[0] - 15));
         }
-        ui.rotate(angleMinute);
+        if (flag) 
+        {
+            ui.rotate(angleMinute);
+        } 
+        else 
+        {
+            ui.rotate(radians(270));
+        }
         ui.stroke(255);
         ui.strokeWeight(5);
         ui.line(-10, 0, 70, 0);
@@ -112,12 +141,21 @@ public class Clock extends PApplet
         ui.pushMatrix();
         ui.translate(x, y);
         float angleSecond = radians(270);
-        if ((time[0] >= 0 && time[0] <= 15)) {
+        if ((time[0] >= 0 && time[0] <= 15)) 
+        {
             angleSecond = radians(270 + 6 * time[0]);
-        } else {
+        } else 
+        {
             angleSecond = radians(6 * (time[0] - 15));
         }
-        ui.rotate(angleSecond);
+        if (flag) 
+        {
+            ui.rotate(angleSecond);
+        } 
+        else 
+        {
+            ui.rotate(radians(270));
+        }
         ui.stroke(255, 0, 0);
         ui.strokeWeight(3);
         ui.line(-15, 0, 90, 0);

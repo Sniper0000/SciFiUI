@@ -19,7 +19,6 @@ public class UI extends PApplet
 
     boolean[] keys = new boolean[1024];
 
-
     public void keyPressed()
     {
         keys[keyCode] = true;
@@ -100,11 +99,11 @@ public class UI extends PApplet
         background(0);
 
         b1.render();
-        b1.MouseClick();
+        b1.MouseClicked();
         b2.render();
-        b2.MouseClick();
+        b2.MouseClicked();
         b3.render();
-        b3.MouseClick();
+        b3.MouseClicked();
 
         mc1.update();
         mc1.render();
@@ -122,7 +121,7 @@ public class UI extends PApplet
 
         if (checkKey(LEFT))
         {
-            System.out.println("Left arrow key pressed");
+            //System.out.println("LEFT");
         }
 
         f1.render();
@@ -148,6 +147,7 @@ public class UI extends PApplet
         c1.update();
         c1.render();
         c2.render();
+        c2.keyPressed();
         c2.hourPointer();
         c2.minutePointer();
         c2.secondPointer();
@@ -156,4 +156,3 @@ public class UI extends PApplet
  
     }
 }
-
