@@ -7,9 +7,10 @@ public class UI extends PApplet
     Button b1, b2, b3;
     MovingCube mc1, mc2, mc3, mc4, mc5;
     DashBoard d1, d2;
-    Frame f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13;
+    Frame f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12;
     FrameLine l1, l2, l3, l4;
-    Clock c;
+    DigitalClock c1;
+    Clock c2;
     ShipStatu si;
 
     // set variable to control
@@ -69,22 +70,24 @@ public class UI extends PApplet
         f3 = new Frame(this, 50, 810, 300, 240, 7, "SPACE SHIP SYSTEM V1.0");
         f4 = new Frame(this, 360, 50, 1160, 600, 7, "monitor");
         f5 = new Frame(this, 360, 670, 1160, 380, 7, "Dash Board");
-        f6 = new Frame(this, 1530, 50, 350, 380, 7, "Clock");
-        f7 = new Frame(this, 1530, 440, 350, 210, 7, "Star Info");
-        f8 = new Frame(this, 1530, 670, 350, 380, 7, "Radar");
+        f6 = new Frame(this, 1530, 50, 350, 590, 7, "Clock");
+        f7 = new Frame(this, 1530, 670, 350, 380, 7, "Radar");
 
         // frame(ship data)
-        f9 = new Frame(this, 1300, 750, 150, 20, 7, "");
-        f10 = new Frame(this, 1300, 800, 150, 20, 7, "");
-        f11 = new Frame(this, 1300, 850, 150, 20, 7, "");
-        f12 = new Frame(this, 1300, 900, 150, 20, 7, "");
-        f13 = new Frame(this, 1300, 950, 150, 20, 7, "");
+        f8 = new Frame(this, 1300, 750, 150, 20, 7, "");
+        f9 = new Frame(this, 1300, 800, 150, 20, 7, "");
+        f10 = new Frame(this, 1300, 850, 150, 20, 7, "");
+        f11 = new Frame(this, 1300, 900, 150, 20, 7, "");
+        f12 = new Frame(this, 1300, 950, 150, 20, 7, "");
 
         // line
         l1 = new FrameLine(this, 360, 660, 1880 ,660, 3, 153);
 
+        // digital clock
+        c1 = new DigitalClock(this, 1700, 170, 100);
+
         // clock
-        c = new Clock(this, 1700, 250, 150);
+        c2 = new Clock(this, 1700, 450, 140);
 
         // ship info
         si = new ShipStatu(this, 200, 550, 100, 750, 300, 750, 255, 3);
@@ -134,7 +137,6 @@ public class UI extends PApplet
         f10.render();
         f11.render();
         f12.render();
-        f13.render();
 
         l1.render();
 
@@ -143,8 +145,9 @@ public class UI extends PApplet
         d2.update();
         d2.render();
 
-        c.update();
-        c.render();
+        c1.update();
+        c1.render();
+        c2.render();
 
         si.render();
 
