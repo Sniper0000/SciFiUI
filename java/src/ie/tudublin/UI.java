@@ -18,6 +18,7 @@ public class UI extends PApplet
 
     boolean[] keys = new boolean[1024];
 
+
     public void keyPressed()
     {
         keys[keyCode] = true;
@@ -58,10 +59,6 @@ public class UI extends PApplet
         // radar
         radar = new Radar(this, 1, 1700, 860, 150);
         
-        // border
-        //border = width * 0.05f;
-        
-
         // dash board
         d1 = new DashBoard(this, 1, 550, 860, 150);
         d2 = new DashBoard(this, 2, 950, 860, 150);
@@ -91,27 +88,9 @@ public class UI extends PApplet
 
         // ship info
         si = new ShipStatu(this, 200, 550, 100, 750, 300, 750, 255, 3);
+
     }
     Radar radar;
-    //float border;
-
-    /*private void drawGrid()
-    {
-        textAlign(CENTER, CENTER);
-        for(int i = -10; i <= 10; i ++)
-        {
-            float x = map(i, -10, 10, border, width - border);
-            float y = map(i, -10, 10, border, height - border);
-            stroke(0, 0, 255);
-            line(x, border, x, height - border);
-            fill(255);
-            text(i, x, border / 2);
-            stroke(0, 0, 255);
-            line(border, y, width - border, y);
-            fill(255);
-            text(i, border / 2, y);
-        }
-    }*/
 
     public void draw()
     {
@@ -169,7 +148,6 @@ public class UI extends PApplet
 
         si.render();
 
-        //drawGrid();
     }
 }
 
