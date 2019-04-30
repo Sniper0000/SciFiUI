@@ -4,15 +4,17 @@ Name: Zhimian Wu
 
 Student Number: D16123932
 
-Fork this repository and use it a starter project for your assignment
-
 # Description of the assignment
+I have created an interface of a space ship system, there are some tools on it. Like buttons, first is to open the star map, second is to check the ship statu and the third is to see the news from Space Radio Station.
 
 # Instructions
 
+
 # How it works
 
+
 # What I am most proud of in the assignment
+I use two kinds of ways add two different type of clock in to the interface, one is using map function to control the clock working, the other one is using pushMatrix() and popMatrix to control the rotation of second pointer, minute pointer and hour pointer. It also helps me to draw the clock.
 
 # Markdown Tutorial
 
