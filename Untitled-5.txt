@@ -1,0 +1,37 @@
+Hi, everybody, today I'm going to introduce my ca of my oop course. As you can see 
+this is a interface, I create this UI for space ship. Well let's see what we got here.
+
+As you can see, there are three buttons in the control button frame, star map, ship 
+info and news. You will find when I click those buttons, they will change color, this 
+is the feed back when you click it. Unfortunately, I didn't add any features to the 
+button, so when I clicked the button, nothing will happened.
+
+Here is the ship statu, this graph is create by map function and arrays, I use 
+arrays to store some value and use map function to get the mapping value to draw on 
+his place
+
+Here is the frame I was planned to write the name of this system, I did, just the
+words looks so small.
+
+And here is the monitor that I was planning to display something, like star map or 
+news. But I had some problem working on it. So it looks very empty.
+
+well, next is the dashboard, I changed some variable in the class so you will find
+these two lines rotate speed are different. Next to the dashboard is the movingCube,
+maybe a moving square, whatever, I write this to makes this UI more like a space 
+ship system, do you remember the UI in Iron man? It looks so cool. Hope those moving
+square also makes my UI so cool too.
+
+Next to the moving square is the radar, it create by PVector function.
+
+And the last one is those two clocks, how do you feel with those two clocks? The
+first one I used arc() function to simulate the time changing, see, a second and 
+another second, here is the minute and the hour and also there is a digital clock
+displayed in the center of the circle. It also can display the date. Hope this kind
+of clock appear in the future. it's so cool
+
+And this clock, more like a normal clock in our life. I used push and popMatrix to 
+help me build this, and the mose helpful function is rotate(), it helps me draw the
+clock also helps me create those pointers.
+
+that's all, thanks for your watching.

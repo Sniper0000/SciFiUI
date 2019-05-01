@@ -33,7 +33,7 @@ public class Clock extends PApplet
         ui.strokeWeight(10);
         ui.fill(0);
         ui.ellipse(x, y, radius * 2, radius * 2);
-
+        
         for(int i = 1 ; i <= 60 ; i ++)
         {
             ui.pushMatrix();
@@ -52,7 +52,7 @@ public class Clock extends PApplet
             ui.popMatrix();
         }
         ui.textSize(25);
-        ui.fill(255);
+        ui.fill(255, 0, 0);
         ui.stroke(255);
         ui.strokeWeight(1);
         ui.text(12, 1700, 345); // 12 o'clock
@@ -99,9 +99,9 @@ public class Clock extends PApplet
         {
             ui.rotate(radians(270));
         }
-        ui.stroke(255);
+        ui.stroke(255, 0, 0);
         ui.strokeWeight(7);
-        ui.line(-10, 0, 50, 0);
+        ui.line(-15, 0, 70, 0);
         ui.popMatrix();
     }
 
@@ -128,9 +128,9 @@ public class Clock extends PApplet
         {
             ui.rotate(radians(270));
         }
-        ui.stroke(255);
+        ui.stroke(0, 255, 0);
         ui.strokeWeight(5);
-        ui.line(-10, 0, 70, 0);
+        ui.line(-15, 0, 100, 0);
         ui.popMatrix();
     }
 
@@ -156,11 +156,10 @@ public class Clock extends PApplet
         {
             ui.rotate(radians(270));
         }
-        ui.stroke(255, 0, 0);
+        ui.stroke(255, 0, 255);
         ui.strokeWeight(3);
-        ui.line(-15, 0, 90, 0);
+        ui.line(-15, 0, 130, 0);
         ui.fill(255, 0, 0);
-        ui.ellipse(115, 0, 10, 10);
         ui.stroke(255);
         ui.popMatrix();
     }

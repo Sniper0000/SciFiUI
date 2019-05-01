@@ -30,10 +30,6 @@ public class MovingCube
         ui.stroke(255);
         ui.fill(255);
         ui.rect(x, y, width, height, radius);
-        // Static field
-        //ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        //ui.text("I am a moving circle", x, y);
-
     }
 
     public void update()

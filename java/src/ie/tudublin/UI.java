@@ -8,7 +8,7 @@ public class UI extends PApplet
     MovingCube mc1, mc2, mc3, mc4, mc5;
     DashBoard d1, d2;
     Frame f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12;
-    FrameLine l1, l2, l3, l4;
+    FrameLine l1;
     DigitalClock c1;
     Clock c2;
     ShipStatu ss;
@@ -47,7 +47,7 @@ public class UI extends PApplet
         // button
         b1 = new Button(this, 150, 100, 100, 50, 7, "Star Map");
         b2 = new Button(this, 150, 200, 100, 50, 7, "Ship Info");
-        b3 = new Button(this, 150, 300, 100, 50, 7,"News");
+        b3 = new Button(this, 150, 300, 100, 50, 7, "News");
 
         // moving cube
         mc1 = new MovingCube(this, 1300, 750, 30, 20, 7, MCL_Range, MCR_Range, 1f);
@@ -89,8 +89,7 @@ public class UI extends PApplet
         c2 = new Clock(this, 1700, 450, 140);
 
         // ship info
-        ss = new ShipStatu(this, 50, 400, 255, 3);
-        
+        ss = new ShipStatu(this, 50, 400, 255, 3);   
     }
     Radar radar;
 
@@ -118,11 +117,6 @@ public class UI extends PApplet
 
         radar.update();
         radar.render();
-
-        if (checkKey(LEFT))
-        {
-            //System.out.println("LEFT");
-        }
 
         f1.render();
         f2.render();
