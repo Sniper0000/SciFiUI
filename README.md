@@ -60,18 +60,6 @@ I use two kinds of ways add two different type of clock in to the interface, one
 
 # Markdown Tutorial
 
-This is  *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
 This is my project Java File list
 
 - Main.java
@@ -94,14 +82,6 @@ This is calling other class in UI:
 ![An image](images/3.jpg)
 
 ![An image](images/4.jpg)
-
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
 
 # SciFi UI Project Code
 
@@ -138,7 +118,7 @@ public void render()
 }
 ```
 
-![An image](images/button.jpg)
+[An image](images/button.jpg)
 
 ## MovingCube.java
 
