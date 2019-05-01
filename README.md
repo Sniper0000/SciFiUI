@@ -75,13 +75,13 @@ This is my project Java File list
 
 This is calling other class in UI:
 
-![An image](images/1.jpg)
+![An image](images/1.png)
 
-![An image](images/2.jpg)
+![An image](images/2.png)
 
-![An image](images/3.jpg)
+![An image](images/3.png)
 
-![An image](images/4.jpg)
+![An image](images/4.png)
 
 # SciFi UI Project Code
 
@@ -118,7 +118,7 @@ public void render()
 }
 ```
 
-[An image](images/button.jpg)
+[An image](images/button.png)
 
 ## MovingCube.java
 
@@ -137,7 +137,7 @@ public void update()
 }
 ```
 
-![An image](images/mc.jpg)
+![An image](images/mc.png)
 
 ## DashBoard.java
 
@@ -335,7 +335,7 @@ public void keyPressed()
     }
 ```
 
-![An image](images/clock.jpg)
+![An image](images/clock.png)
 
 Those links might helps you to undertand how it works:
 - [pushMatrix](https://processing.org/reference/pushMatrix_.html)
